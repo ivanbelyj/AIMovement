@@ -2,9 +2,9 @@ using UnityEngine;
 
 public abstract class NavManagerCore : MonoBehaviour
 {
-    protected GridGraph graph;
+    protected GridGraph<PositionedVertex<VertexEmptyValue>, VertexEmptyValue> graph;
 
-    public GridGraph Graph {
+    public GridGraph<PositionedVertex<VertexEmptyValue>, VertexEmptyValue> Graph {
         get {
             if (graph == null) {
                 Debug.LogError($"{nameof(Graph)} was not initialized in {nameof(NavManagerCore)} ");
